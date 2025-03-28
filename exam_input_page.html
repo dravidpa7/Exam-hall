@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="exam_style.css">
+    <script src="exam.js"></script>
+</head>
+<body>
+    <!-- <div class="sidebar">
+        <h2>Navigation</h2>
+    </div> -->
+    <div class="sidebar">
+        <h2 style="color: white;">Hall Allocation</h2>
+        <div id="formArea">
+            <div class="form-container">
+                <button class="close-btn" onclick="removeForm(this)">X</button>
+                <label for="subjectCode">Subject Code:</label>
+                <input type="text" class="subjectCode" placeholder="Enter Subject Code">
+                
+                <label for="department">Department:</label>
+                <select class="department">
+                    <option value="CSE">CSE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                    <option value="Civil">Civil</option>
+                    <option value="Mech">Mech</option>
+                </select>
+                
+                <label for="year">Year:</label>
+                <select class="year">
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+                </select>
+                
+                <label for="regNumbers">Registration Numbers:</label>
+                <textarea class="regNumbers" placeholder="Enter numbers like 1101 1102 1103" oninput="updateCount(this)"></textarea>
+                <p>Total Count: <span class="count">0</span></p>
+                <button onclick="addFields()">Add</button>
+            </div>
+        </div>
+        <button onclick="submitData()">Submit</button>
+    </div>
+    <div>
+        <h1>Hall allocation table</h1>
+        <table id="dataTable"></table>
+
+    </div>
+
+    
+
+</body>
+</html>

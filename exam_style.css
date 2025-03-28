@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+.sidebar {
+    width: 300px;
+    background: #333;
+    color: black;
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+}
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background: darkblue;
+}
+.count {
+    font-weight: bold;
+    color: red;
+}
+.close-btn {
+    position: relative;
+    top: -9px;
+    left: 14rem;
+    background: #0000ff;
+    color: white;
+    border: none;
+    padding: 2px 0px;
+    border-radius: 40%;
+    width: 10%;
+    cursor: pointer;
+}
+table {
+    width: 250px;
+    border-collapse: collapse;
+}
+td {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 18px;
+    font-weight: bold;
+}

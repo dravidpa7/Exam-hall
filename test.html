@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5x5 Table - Custom Order</title>
+    <style>
+        table {
+            width: 250px;
+            border-collapse: collapse;
+        }
+        td {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            border: 1px solid black;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <table id="dataTable"></table>
+
+    <script>
+        // Given sequential data
+        const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
+
+        // Target order (row-wise)
+        const targetIndexes = [
+            0, 15, 5, 20, 10,
+            13, 3, 18, 8, 23,
+            1, 16, 6, 21, 11,
+            14, 4, 19, 9, 24,
+            2, 17, 7, 22, 12
+        ];
+
+        // Rearranging the data array according to the targetIndexes
+        const reorderedData = targetIndexes.map(index => data[index]);
+
+        function generateTable() {
+            const table = document.getElementById("dataTable");
+
+            let index = 0;
+            for (let i = 0; i < 5; i++) {
+                let row = document.createElement("tr");
+                for (let j = 0; j < 5; j++) {
+                    let cell = document.createElement("td");
+                    cell.textContent = reorderedData[index]; // Assign values in the correct order
+                    row.appendChild(cell);
+                    index++;
+                }
+                table.appendChild(row);
+            }
+        }
+
+        generateTable();
+    </script>
+
+</body>
+</html>
